@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ç ❤️ A - 100 Animasyon</title>
+    <title>Malmısın - 100 Animasyon</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
         * {
@@ -32,20 +32,63 @@
         }
         
         h1 {
-            font-size: 2.8rem;
-            margin-bottom: 30px;
+            font-size: 2.5rem;
+            margin-bottom: 20px;
             text-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
             color: white;
             font-weight: 900;
             letter-spacing: 2px;
         }
         
+        .name-selector {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 15px;
+            margin-bottom: 30px;
+            padding: 15px;
+            background-color: rgba(30, 30, 30, 0.8);
+            border-radius: 12px;
+            border: 1px solid #444;
+            width: 90%;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        .name-btn {
+            padding: 12px 25px;
+            font-size: 1.1rem;
+            background: #111;
+            color: #ddd;
+            border: 2px solid #555;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-weight: 600;
+            flex: 1;
+            min-width: 180px;
+        }
+        
+        .name-btn:hover {
+            background: #222;
+            border-color: #aaa;
+            transform: translateY(-2px);
+        }
+        
+        .name-btn.active {
+            background: #333;
+            border-color: #fff;
+            color: white;
+            box-shadow: 0 0 15px rgba(255, 255, 255, 0.3);
+        }
+        
         .animation-display {
-            height: 350px;
+            height: 320px;
             display: flex;
             align-items: center;
             justify-content: center;
-            margin: 30px auto;
+            margin: 20px auto;
             padding: 20px;
             background-color: rgba(20, 20, 20, 0.8);
             border-radius: 15px;
@@ -57,7 +100,7 @@
         }
         
         .text-display {
-            font-size: 4rem;
+            font-size: 3.5rem;
             font-weight: 900;
             text-align: center;
             padding: 20px;
@@ -66,6 +109,7 @@
             display: flex;
             align-items: center;
             justify-content: center;
+            line-height: 1.2;
         }
         
         .controls {
@@ -73,7 +117,7 @@
             flex-wrap: wrap;
             justify-content: center;
             gap: 12px;
-            margin: 30px 0;
+            margin: 25px 0;
             padding: 20px;
             background-color: rgba(30, 30, 30, 0.8);
             border-radius: 15px;
@@ -94,8 +138,6 @@
             transition: all 0.3s ease;
             font-weight: 600;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-            position: relative;
-            overflow: hidden;
         }
         
         button:hover {
@@ -137,7 +179,7 @@
         
         .counter {
             font-size: 1.2rem;
-            margin-top: 20px;
+            margin-top: 15px;
             padding: 10px 20px;
             background-color: #111;
             border-radius: 50px;
@@ -159,7 +201,7 @@
         }
         
         .made-by {
-            margin-top: 40px;
+            margin-top: 35px;
             padding: 15px 30px;
             background-color: #111;
             border-radius: 10px;
@@ -174,19 +216,6 @@
         .made-by span {
             color: #aaa;
             font-weight: 300;
-        }
-        
-        /* Kalp atışı için ek animasyon */
-        .heart-beat {
-            animation: heartbeat 1.2s infinite;
-            display: inline-block;
-            color: #ff4081;
-            margin: 0 10px;
-        }
-        
-        @keyframes heartbeat {
-            0%, 100% { transform: scale(1); }
-            50% { transform: scale(1.3); }
         }
         
         @keyframes shine {
@@ -235,7 +264,7 @@
         }
         @keyframes anim4 {
             0% { letter-spacing: normal; opacity: 0.3; }
-            100% { letter-spacing: 30px; opacity: 1; }
+            100% { letter-spacing: 20px; opacity: 1; }
         }
         
         /* Animasyon 5 */
@@ -325,6 +354,12 @@
                 height: 250px;
             }
             
+            .name-btn {
+                padding: 10px 15px;
+                font-size: 1rem;
+                min-width: 140px;
+            }
+            
             button {
                 padding: 10px 16px;
                 font-size: 0.9rem;
@@ -342,11 +377,22 @@
             }
             
             .text-display {
-                font-size: 2rem;
+                font-size: 2.2rem;
             }
             
             .animation-display {
                 height: 200px;
+            }
+            
+            .name-selector {
+                gap: 10px;
+                padding: 12px;
+            }
+            
+            .name-btn {
+                padding: 10px;
+                font-size: 0.9rem;
+                min-width: 120px;
             }
             
             .controls {
@@ -368,14 +414,16 @@
 </head>
 <body>
     <div class="container">
-        <h1>Ç ❤️ A - 100 Animasyon</h1>
+        <h1>Malmısın - 100 Animasyon</h1>
+        
+        <div class="name-selector">
+            <button class="name-btn active" data-name="ritaj malmısın">ritaj malmısın</button>
+            <button class="name-btn" data-name="havva malmısın">havva malmısın</button>
+            <button class="name-btn" data-name="arnisa malmısın">arnisa malmısın</button>
+        </div>
         
         <div class="animation-display">
-            <div class="text-display" id="animated-text">
-                <span class="letter-c">Ç</span>
-                <span class="heart-beat">❤️</span>
-                <span class="letter-a">A</span>
-            </div>
+            <div class="text-display" id="animated-text">ritaj malmısın</div>
         </div>
         
         <div class="counter">
@@ -404,7 +452,8 @@
         let currentAnimation = 1;
         const totalAnimations = 100;
         let autoChangeInterval = null;
-        let isAutoChanging = false;
+        let isAutoChanging = true; // Otomatik başlat
+        let currentName = "ritaj malmısın";
         
         // DOM elementleri
         const animatedText = document.getElementById('animated-text');
@@ -415,22 +464,18 @@
         const randomBtn = document.getElementById('random-btn');
         const autoToggleBtn = document.getElementById('auto-toggle');
         const resetBtn = document.getElementById('reset-btn');
-        
-        // Harf elementlerini seç
-        const letterC = document.querySelector('.letter-c');
-        const heart = document.querySelector('.heart-beat');
-        const letterA = document.querySelector('.letter-a');
+        const nameButtons = document.querySelectorAll('.name-btn');
         
         // Animasyon isimleri (bilgi için)
         const animationNames = [
             "Büyüme ve Dönme", "Yukarı-Aşağı Hareket", "360° Dönüş", "Harfleri Açma", "Eğik Hareket",
             "3D Dönüş", "Parlaklık Dalgası", "Sola-Sağa Sallanma", "Bulanıklık Efekti", "Zıplama ve Dönme",
-            "Ayrı Dans Eden Harfler", "Kalp Atışı ile Dans", "Yanıp Sönme", "Dalga Efekti", "Yayılma Efekti",
+            "Renk Değişimi", "Dans Eden Harfler", "Yanıp Sönme", "Dalga Efekti", "Yayılma Efekti",
             "Kayan Gölge", "Zigzag Hareketi", "Dönen Renkler", "Sıkıştırma", "Yansıma Efekti",
             "Hızlı Titreme", "Yavaş Açılma", "Uzayan Harfler", "Düşen Harfler", "Sıçrayan Harfler",
             "Dairesel Hareket", "Kar Taneleri", "Ateş Efekti", "Su Dalgası", "Rüzgar Efekti",
             "Mıknatıs Çekimi", "Yer Çekimi", "Uzay Boşluğu", "Patlama Efekti", "Toparlanma",
-            "Esneme Hareketi", "Güçlü Kalp Atışı", "Solunum Efekti", "Yıldız Kayması", "Gece Gökyüzü",
+            "Esneme Hareketi", "Kalp Atışı", "Solunum Efekti", "Yıldız Kayması", "Gece Gökyüzü",
             "Güneş Doğuşu", "Gökkuşağı Geçişi", "Aurora Efekti", "Asansör Hareketi", "Salıncak",
             "Sarkaç Hareketi", "Yaylı Hareket", "Sönümleme", "Zıplayan Top", "Uçan Balon",
             "Uçak Hareketi", "Helikopter Pervanesi", "Dönen Dünya", "Ayın Evreleri", "Gezegen Dönüşü",
@@ -443,7 +488,7 @@
             "Define Avı", "Mücevher Parlaması", "Altın Parıltı", "Gümüş Işıltı", "Elmas Kırılması",
             "Pırlanta Işığı", "Yakut Kırmızısı", "Zümrüt Yeşili", "Safir Mavisi", "Ametist Moru",
             "İnci Beyazı", "Opal Gökkuşağı", "Kehribar Sarısı", "Obsidyen Siyahı", "Turkuaz Mavisi",
-            "Son 5 Özel Animasyon", "Kalp Ritmi", "Aşk Dalgası", "Romantik Dans", "Son Sürpriz", "51052105320230 Özel"
+            "Son 5 Özel Animasyon", "Sürpriz Efekt 1", "Sürpriz Efekt 2", "Sürpriz Efekt 3", "Sürpriz Efekt 4", "Sürpriz Efekt 5"
         ];
         
         // Gri tonlarında rastgele renk oluşturma fonksiyonu
@@ -453,13 +498,19 @@
             return `rgb(${grayValue}, ${grayValue}, ${grayValue})`;
         }
         
-        // Özel kalp rengi (kırmızı tonları)
-        function getRandomHeartColor() {
-            const colors = [
-                '#ff4081', '#ff1744', '#f50057', '#c51162', '#d81b60',
-                '#e91e63', '#ad1457', '#880e4f', '#ff5252', '#ff1744'
-            ];
-            return colors[Math.floor(Math.random() * colors.length)];
+        // İsim değiştirme fonksiyonu
+        function changeName(name) {
+            currentName = name;
+            updateDisplay();
+            
+            // Buton aktif durumunu güncelle
+            nameButtons.forEach(btn => {
+                if (btn.dataset.name === name) {
+                    btn.classList.add('active');
+                } else {
+                    btn.classList.remove('active');
+                }
+            });
         }
         
         // CSS'e 100 animasyon ekleme
@@ -472,194 +523,84 @@
                 const duration = (Math.random() * 3 + 2).toFixed(1); // 2-5 saniye
                 const delay = (Math.random() * 1).toFixed(1); // 0-1 saniye
                 const grayColor = getRandomGrayColor();
-                const heartColor = getRandomHeartColor();
                 
-                // Özel animasyonlar için farklı stiller
-                let animationType = 'normal';
+                // Rastgele animasyon türleri (siyah beyaz temaya uygun)
+                const animationTypes = [
+                    `transform: rotate(${Math.random() * 360}deg) scale(${Math.random() + 0.5});`,
+                    `transform: translate(${Math.random() * 100 - 50}px, ${Math.random() * 100 - 50}px);`,
+                    `transform: skew(${Math.random() * 30 - 15}deg, ${Math.random() * 30 - 15}deg);`,
+                    `letter-spacing: ${Math.random() * 30}px;`,
+                    `filter: blur(${Math.random() * 5}px) brightness(${Math.random() * 0.5 + 0.8});`,
+                    `opacity: ${Math.random() * 0.7 + 0.3};`,
+                    `text-shadow: 0 0 ${Math.random() * 30}px ${grayColor};`,
+                    `filter: drop-shadow(0 0 ${Math.random() * 15}px ${grayColor});`
+                ];
                 
-                // Bazı animasyonlarda harfleri ayrı ayrı hareket ettir
-                if (i >= 11 && i <= 20) {
-                    animationType = 'separate';
-                } else if (i >= 61 && i <= 70) {
-                    animationType = 'heart-focused';
-                } else if (i >= 91 && i <= 95) {
-                    animationType = 'special';
+                // Rastgele keyframe oluşturma
+                const keyframePercent = Math.floor(Math.random() * 5) + 3; // 3-7 keyframe noktası
+                let keyframeText = '';
+                
+                for (let j = 0; j <= keyframePercent; j++) {
+                    const percent = (j / keyframePercent) * 100;
+                    const props = animationTypes[Math.floor(Math.random() * animationTypes.length)];
+                    keyframeText += `${percent}% { ${props} } `;
                 }
                 
-                if (animationType === 'separate') {
-                    // Harfleri ayrı ayrı hareket ettiren animasyon
-                    cssText += `
-                    .anim-${i} .letter-c {
-                        animation: anim${i}c ${duration}s infinite ${delay}s alternate;
-                        color: ${grayColor};
-                        display: inline-block;
-                    }
-                    .anim-${i} .heart-beat {
-                        animation: anim${i}h ${duration}s infinite ${delay}s alternate;
-                        color: ${heartColor};
-                        display: inline-block;
-                    }
-                    .anim-${i} .letter-a {
-                        animation: anim${i}a ${duration}s infinite ${delay}s alternate;
-                        color: ${grayColor};
-                        display: inline-block;
-                    }
-                    `;
-                    
-                    // Her harf için ayrı keyframe
-                    for (let letter of ['c', 'h', 'a']) {
-                        const keyframePercent = Math.floor(Math.random() * 4) + 3;
-                        let keyframeText = '';
-                        
-                        for (let j = 0; j <= keyframePercent; j++) {
-                            const percent = (j / keyframePercent) * 100;
-                            const translateX = Math.random() * 100 - 50;
-                            const translateY = Math.random() * 100 - 50;
-                            const rotate = Math.random() * 360;
-                            const scale = Math.random() * 0.5 + 0.8;
-                            
-                            keyframeText += `${percent}% { transform: translate(${translateX}px, ${translateY}px) rotate(${rotate}deg) scale(${scale}); } `;
-                        }
-                        
-                        cssText += `@keyframes anim${i}${letter} { ${keyframeText} } `;
-                    }
-                } else if (animationType === 'heart-focused') {
-                    // Kalbe odaklanan animasyonlar
-                    cssText += `
-                    .anim-${i} {
-                        animation: anim${i} ${duration}s infinite ${delay}s alternate;
-                    }
-                    .anim-${i} .heart-beat {
-                        animation: heartbeat ${Math.random() * 0.5 + 0.5}s infinite;
-                        color: ${heartColor};
-                        filter: drop-shadow(0 0 10px ${heartColor});
-                    }
-                    `;
-                    
-                    // Ana animasyon keyframe
-                    const keyframePercent = Math.floor(Math.random() * 4) + 3;
-                    let keyframeText = '';
-                    
-                    for (let j = 0; j <= keyframePercent; j++) {
-                        const percent = (j / keyframePercent) * 100;
-                        const props = `color: ${grayColor}; text-shadow: 0 0 ${Math.random() * 20}px ${grayColor};`;
-                        keyframeText += `${percent}% { ${props} } `;
-                    }
-                    
-                    cssText += `@keyframes anim${i} { ${keyframeText} } `;
-                } else if (animationType === 'special') {
-                    // Özel animasyonlar
-                    cssText += `
-                    .anim-${i} {
-                        animation: anim${i} ${duration}s infinite ${delay}s alternate;
-                    }
-                    `;
-                    
-                    // Özel efektler
-                    let keyframeText = '';
-                    const effectTypes = [
-                        'filter: hue-rotate(0deg) brightness(1);',
-                        'filter: hue-rotate(180deg) brightness(1.5);',
-                        'filter: hue-rotate(360deg) brightness(1);',
-                        'text-shadow: 0 0 30px white, 0 0 60px #ff4081;',
-                        'transform: scale(1) rotate(0deg);',
-                        'transform: scale(1.2) rotate(5deg);'
-                    ];
-                    
-                    for (let j = 0; j <= 4; j++) {
-                        const percent = j * 25;
-                        const props = effectTypes[Math.floor(Math.random() * effectTypes.length)];
-                        keyframeText += `${percent}% { ${props} } `;
-                    }
-                    
-                    cssText += `@keyframes anim${i} { ${keyframeText} } `;
-                } else {
-                    // Normal animasyon
-                    cssText += `
-                    .anim-${i} {
-                        animation: anim${i} ${duration}s infinite ${delay}s alternate;
-                        color: ${grayColor};
-                    }
-                    `;
-                    
-                    // Rastgele keyframe oluşturma
-                    const keyframePercent = Math.floor(Math.random() * 5) + 3;
-                    let keyframeText = '';
-                    
-                    // Rastgele animasyon türleri
-                    const animationTypes = [
-                        `transform: rotate(${Math.random() * 360}deg) scale(${Math.random() + 0.5});`,
-                        `transform: translate(${Math.random() * 100 - 50}px, ${Math.random() * 100 - 50}px);`,
-                        `transform: skew(${Math.random() * 30 - 15}deg, ${Math.random() * 30 - 15}deg);`,
-                        `letter-spacing: ${Math.random() * 30}px;`,
-                        `filter: blur(${Math.random() * 5}px) brightness(${Math.random() * 0.5 + 0.8});`,
-                        `opacity: ${Math.random() * 0.7 + 0.3};`,
-                        `text-shadow: 0 0 ${Math.random() * 30}px ${grayColor};`,
-                        `filter: drop-shadow(0 0 ${Math.random() * 15}px ${grayColor});`
-                    ];
-                    
-                    for (let j = 0; j <= keyframePercent; j++) {
-                        const percent = (j / keyframePercent) * 100;
-                        const props = animationTypes[Math.floor(Math.random() * animationTypes.length)];
-                        keyframeText += `${percent}% { ${props} } `;
-                    }
-                    
-                    cssText += `@keyframes anim${i} { ${keyframeText} } `;
+                cssText += `
+                .anim-${i} {
+                    animation: anim${i} ${duration}s infinite ${delay}s alternate;
+                    color: ${grayColor};
                 }
+                @keyframes anim${i} {
+                    ${keyframeText}
+                }
+                `;
             }
             
             styleSheet.textContent = cssText;
             document.head.appendChild(styleSheet);
         }
         
-        // Animasyonu güncelleme
-        function updateAnimation(animationNumber) {
+        // Ekranı güncelleme
+        function updateDisplay() {
+            // Metni güncelle
+            animatedText.textContent = currentName;
+            
             // Önceki animasyon sınıflarını kaldır
             animatedText.className = 'text-display';
             
             // Yeni animasyon sınıfını ekle
-            animatedText.classList.add(`anim-${animationNumber}`);
+            animatedText.classList.add(`anim-${currentAnimation}`);
             
             // Güncel animasyon numarasını güncelle
-            currentAnimationElement.textContent = animationNumber;
+            currentAnimationElement.textContent = currentAnimation;
             
             // Animasyon bilgisini güncelle
-            const nameIndex = Math.min(animationNumber - 1, animationNames.length - 1);
-            animationInfo.textContent = `Animasyon ${animationNumber}: ${animationNames[nameIndex]}`;
+            const nameIndex = Math.min(currentAnimation - 1, animationNames.length - 1);
+            animationInfo.textContent = `Animasyon ${currentAnimation}: ${animationNames[nameIndex]} - ${currentName}`;
             
-            // İlk 10 animasyon için özel renkler
-            if (animationNumber <= 10) {
+            // Yazı rengini ve gölgesini güncelle (siyah beyaz tema için gri tonları)
+            if (currentAnimation <= 10) {
                 // İlk 10 animasyon için özel renkler zaten tanımlı
                 return;
             }
             
-            // Kalp rengini güncelle (özel animasyonlar hariç)
-            if (!(animationNumber >= 61 && animationNumber <= 70)) {
-                const heartColor = getRandomHeartColor();
-                heart.style.color = heartColor;
-                heart.style.textShadow = `0 0 15px ${heartColor}`;
-            }
-            
-            // Harf renklerini güncelle (normal animasyonlar için)
-            if (animationNumber < 11 || animationNumber > 20) {
-                const grayColor = getRandomGrayColor();
-                letterC.style.color = grayColor;
-                letterA.style.color = grayColor;
-                letterC.style.textShadow = `0 0 10px ${grayColor}`;
-                letterA.style.textShadow = `0 0 10px ${grayColor}`;
-            }
+            // Diğer animasyonlar için gri tonlarında rastgele renk
+            const randomGrayColor = getRandomGrayColor();
+            animatedText.style.color = randomGrayColor;
+            animatedText.style.textShadow = `0 0 15px ${randomGrayColor}`;
         }
         
         // Önceki animasyon
         function prevAnimation() {
             currentAnimation = currentAnimation > 1 ? currentAnimation - 1 : totalAnimations;
-            updateAnimation(currentAnimation);
+            updateDisplay();
         }
         
         // Sonraki animasyon
         function nextAnimation() {
             currentAnimation = currentAnimation < totalAnimations ? currentAnimation + 1 : 1;
-            updateAnimation(currentAnimation);
+            updateDisplay();
         }
         
         // Rastgele animasyon
@@ -670,7 +611,7 @@
             } while (newAnimation === currentAnimation && totalAnimations > 1);
             
             currentAnimation = newAnimation;
-            updateAnimation(currentAnimation);
+            updateDisplay();
         }
         
         // Otomatik değişimi başlat/durdur
@@ -691,25 +632,21 @@
         // Sıfırlama
         function resetAnimation() {
             currentAnimation = 1;
-            updateAnimation(currentAnimation);
+            currentName = "ritaj malmısın";
+            updateDisplay();
             
-            if (isAutoChanging) {
+            // İsim butonlarını güncelle
+            nameButtons.forEach(btn => {
+                if (btn.dataset.name === currentName) {
+                    btn.classList.add('active');
+                } else {
+                    btn.classList.remove('active');
+                }
+            });
+            
+            if (!isAutoChanging) {
                 toggleAutoChange();
             }
-        }
-        
-        // Özel efekt: 51052105320230 gösterimi
-        function showSpecialEffect() {
-            const originalHTML = animatedText.innerHTML;
-            animatedText.innerHTML = "51052105320230";
-            animatedText.style.fontSize = "3.5rem";
-            animatedText.style.letterSpacing = "5px";
-            
-            setTimeout(() => {
-                animatedText.innerHTML = originalHTML;
-                animatedText.style.fontSize = "";
-                animatedText.style.letterSpacing = "";
-            }, 2000);
         }
         
         // Olay dinleyicileri
@@ -719,8 +656,12 @@
         autoToggleBtn.addEventListener('click', toggleAutoChange);
         resetBtn.addEventListener('click', resetAnimation);
         
-        // Kalbe tıklayınca özel efekt
-        heart.addEventListener('click', showSpecialEffect);
+        // İsim butonları için olay dinleyicileri
+        nameButtons.forEach(btn => {
+            btn.addEventListener('click', () => {
+                changeName(btn.dataset.name);
+            });
+        });
         
         // Klavye tuşları ile kontrol
         document.addEventListener('keydown', (e) => {
@@ -739,12 +680,17 @@
                 case 'R':
                     randomAnimation();
                     break;
+                case '1':
+                    changeName("ritaj malmısın");
+                    break;
+                case '2':
+                    changeName("havva malmısın");
+                    break;
+                case '3':
+                    changeName("arnisa malmısın");
+                    break;
                 case 'Escape':
                     resetAnimation();
-                    break;
-                case 's':
-                case 'S':
-                    showSpecialEffect();
                     break;
             }
         });
@@ -752,10 +698,17 @@
         // Sayfa yüklendiğinde animasyonları oluştur ve başlat
         window.addEventListener('DOMContentLoaded', () => {
             generateAnimations();
-            updateAnimation(currentAnimation);
+            updateDisplay();
             
             // Başlangıçta otomatik değişimi başlat
             toggleAutoChange();
+            
+            // Başlangıçta aktif olan ismi belirle
+            nameButtons.forEach(btn => {
+                if (btn.classList.contains('active')) {
+                    currentName = btn.dataset.name;
+                }
+            });
         });
     </script>
 </body>
